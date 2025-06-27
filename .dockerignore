@@ -1,0 +1,23 @@
+# Игнорируем node_modules — они будут устанавливаться внутри контейнера
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Git папка и файлы
+.git
+.gitignore
+
+# IDEшные файлы
+.vscode
+.idea
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Next.js кеш
+.next
+out
+
+# Логи
+*.log
