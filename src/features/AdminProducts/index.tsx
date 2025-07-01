@@ -4,13 +4,13 @@ import { FC, useEffect, useState } from 'react';
 
 import { Box } from '@mui/material';
 import Title from '@wns/shared/ui/Title';
+import SearchTable from '@wns/widgets/Table/SearchTable';
 
 import ProductTable from '@wns/features/AdminProducts/components/ProductTable';
 import {
   ProductType,
   mockAdminProducts,
 } from '@wns/features/AdminProducts/components/ProductTable/model/products.mock';
-import SearchProducts from '@wns/features/AdminProducts/components/SearchProducts';
 
 const AdminProducts: FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -30,7 +30,7 @@ const AdminProducts: FC = () => {
   return (
     <Box sx={{ p: 3 }}>
       <Title align={'left'}>Products</Title>
-      <SearchProducts searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <SearchTable searchTerm={searchTerm} setSearchTerm={setSearchTerm} placeholder={'Search products...'} />
       <ProductTable data={productData} />
     </Box>
   );
