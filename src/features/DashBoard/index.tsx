@@ -12,7 +12,9 @@ import StatCards from '@wns/features/DashBoard/components/StatCards';
 const DashBoard: FC = () => {
   return (
     <Box sx={{ p: 3 }}>
-      <Title align={'left'}>Dashboard</Title>
+      <Title align={'left'} sx={{ textTransform: 'none' }}>
+        Dashboard
+      </Title>
       <StatCards />
       <Grid container spacing={2} mb={3}>
         <Grid size={{ md: 6, xs: 12 }}>
