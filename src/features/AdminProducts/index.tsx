@@ -6,13 +6,13 @@ import { IoMdAdd } from 'react-icons/io';
 import { Box, Button } from '@mui/material';
 import { styled } from '@mui/system';
 import Title from '@wns/shared/ui/Title';
+import SearchTable from '@wns/widgets/Table/SearchTable';
 
 import ProductTable from '@wns/features/AdminProducts/components/ProductTable';
 import {
   ProductType,
   mockAdminProducts,
 } from '@wns/features/AdminProducts/components/ProductTable/model/products.mock';
-import SearchProducts from '@wns/features/AdminProducts/components/SearchProducts';
 
 const StyledAddButton = styled(Button)(({ theme }) => ({
   color: 'black',
@@ -61,7 +61,7 @@ const AdminProducts: FC = () => {
           Add Product
         </StyledAddButton>
       </Box>
-      <SearchProducts searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <SearchTable searchTerm={searchTerm} setSearchTerm={setSearchTerm} placeholder={'Search products...'} />
       <ProductTable data={productData} />
     </Box>
   );
